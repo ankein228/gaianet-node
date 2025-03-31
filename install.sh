@@ -13,7 +13,7 @@ version="0.4.25"
 rag_api_server_version="0.13.13"
 llama_api_server_version="0.16.14"
 wasmedge_version="0.14.1"
-ggml_bn="b4917"
+ggml_bn="b4917
 vector_version="0.38.0"
 dashboard_version="v3.1"
 assistant_version="0.4.3"
@@ -424,7 +424,7 @@ else
 
     if [ ! -f "$gaianet_base_dir/config.json" ]; then
         if [ "$repo_branch" = "main" ]; then
-            check_curl https://github.com/GaiaNet-AI/gaianet-node/releases/download/$version/config.json $gaianet_base_dir/config.json
+            check_curl https://raw.githubusercontent.com/ankein228/gaianet-node/main/config.json $gaianet_base_dir/config.json
         else
             check_curl https://github.com/GaiaNet-AI/gaianet-node/raw/$repo_branch/config.json $gaianet_base_dir/config.json
         fi
