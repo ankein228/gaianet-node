@@ -30,7 +30,7 @@ migrated_from_file=""
 # 0: must be root or sudo, 1: regular unprivileged user
 unprivileged=0
 # url to the config file
-config_url="https://raw.githubusercontent.com/ankein228/gaianet-node/main/config.json"
+config_url="https://raw.githubusercontent.com/cryptobasketgit/gaianet-node/main/config.json"
 # path to the gaianet base directory
 gaianet_base_dir="$HOME/gaianet"
 # tmp directory
