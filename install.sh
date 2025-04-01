@@ -423,11 +423,13 @@ else
     printf "[+] Downloading default config.json ...\n"
 
     if [ ! -f "$gaianet_base_dir/config.json" ]; then
-        if [ "$repo_branch" = "main" ]; then
-            check_curl https://github.com/GaiaNet-AI/gaianet-node/releases/download/$version/config.json $gaianet_base_dir/config.json
-        else
-            check_curl https://github.com/GaiaNet-AI/gaianet-node/raw/$repo_branch/config.json $gaianet_base_dir/config.json
-        fi
+    if [ -n "$config_url" ]; then
+        check_curl "$config_url" "$gaianet_base_dir/config.json"
+    elif [ "$repo_branch" = "main" ]; then
+        check_curl https://github.com/GaiaNet-AI/gaianet-node/releases/download/$version/config.json "$gaianet_base_dir/config.json"
+    else
+        check_curl https://github.com/GaiaNet-AI/gaianet-node/raw/$repo_branch/config.json "$gaianet_base_dir/config.json"
+    fi
 
         info "    👍 Done! The default config file is downloaded in $gaianet_base_dir"
     else
