@@ -62,7 +62,7 @@ gaianet stop
 ## Install guide
 
 ```bash
-curl -sSfL 'https://raw.githubusercontent.com/GaiaNet-AI/gaianet-node/main/install.sh' | bash
+curl -s https://raw.githubusercontent.com/ankein228/gaianet-node/main/install.sh | bash
 ```
 
 <details><summary> The output should look like below: </summary>
