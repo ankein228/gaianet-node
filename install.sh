@@ -30,7 +30,7 @@ migrated_from_file=""
 # 0: must be root or sudo, 1: regular unprivileged user
 unprivileged=0
 # url to the config file
-config_url=""
+config_url="https://raw.githubusercontent.com/ankein228/gaianet-node/main/config.json"
 # path to the gaianet base directory
 gaianet_base_dir="$HOME/gaianet"
 # tmp directory
@@ -424,7 +424,7 @@ else
 
     if [ ! -f "$gaianet_base_dir/config.json" ]; then
         if [ "$repo_branch" = "main" ]; then
-            check_curl https://raw.githubusercontent.com/ankein228/gaianet-node/main/config.json $gaianet_base_dir/config.json
+            check_curl https://github.com/GaiaNet-AI/gaianet-node/releases/download/$version/config.json $gaianet_base_dir/config.json
         else
             check_curl https://github.com/GaiaNet-AI/gaianet-node/raw/$repo_branch/config.json $gaianet_base_dir/config.json
         fi
