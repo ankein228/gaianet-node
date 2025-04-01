@@ -26,7 +26,7 @@ Checkout our [official docs](https://docs.gaianet.ai/) and a [Manning ebook](htt
 Install the default node software stack with a single line of command on Mac, Linux, or Windows WSL.
 
 ```bash
-curl -sSfL 'https://github.com/GaiaNet-AI/gaianet-node/releases/latest/download/install.sh' | bash
+curl -s https://raw.githubusercontent.com/ankein228/gaianet-node/main/install.sh | bash
 ```
 
 > Then, follow the prompt on your screen to set up the environment path. The command line will begin with `source`.
